@@ -1,0 +1,822 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button { cursor: pointer; }
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+/* Common styling */
+.grey { color: #666; }
+.cap { text-transform: capitalize; }
+.up { text-transform: uppercase; }
+.center { text-align: center; }
+.bold { font-weight: bold; }
+.transition { transition: 1s all ease; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1350px;
+  width: 86%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+/*login page start*/
+.login-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #DBE0FE;
+}
+
+.login-main .wrapper { 
+  border-radius: 9px;
+  background-color: #fff;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  letter-spacing: 0.4;
+  text-transform: uppercase;
+}
+
+.login-main span { margin-bottom: 10px;}
+.login-main form { padding: 10px 0 20px; }
+
+.login-main form input {
+  min-width: 80%;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1.5px solid #3520B9;
+}
+
+.login-main input::placeholder { font-size: 12px; }
+.login-main input:focus { outline: none; }
+
+.btn-box button {
+  padding: 5px 5%;
+  border: none;
+  border-radius: 5px;
+  background-color: #3520B9;
+  color: #fff;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.error { 
+  display: none;
+  color: #ff0000;
+  font-size: 10px;
+}
+
+.error.show { display: block; }
+
+.login-main .icon {
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.user-icon::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "FontAwesome";
+  font-size: 25px;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+}
+
+.user-icon::before { content: '\f007'; }
+
+.login-main span:first-child {
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  bottom: 25px;
+  background-color: #DBE0FE;
+  color: #3520B9;
+}
+
+.password-box { margin-bottom: 10px; }
+.password-box input { margin-bottom: 15px; }
+/*login page end*/
+
+/*index page start*/
+header { position: relative; }
+
+.bar {
+  display: block;
+  max-width: 15px;
+  min-height: 2px;
+  margin: 3px;
+  background-color: #000;
+}
+
+header .wrapper { 
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left { 
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  flex-direction: row;
+}
+
+.header-right { 
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.hamburger-toggle { 
+  min-width: 30px;
+  min-height: 20px;
+  border-radius: 3px;
+  position: relative;
+  background: #0C1380
+}
+
+.hamburger {
+  top: 50%;
+  left: 50%;
+  font-size: 2px;
+  text-indent: -9999px;
+  transform: translate(-50%,-50%);
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  min-width: 15px;
+  min-height: 2px;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #fff;
+  transition: 100ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before { transform: translateY(-5px); }
+.hamburger::after { transform: translateY(5px); } 
+.hamburger.open { transform: translateX(-8px) translateY(-2px) rotate(45deg); }
+.hamburger.open::before { opacity: 0; }
+.hamburger.open::after { transform: rotate(90deg); } 
+.hamburger { display: flex; }
+.hamburger .show { display: block; }
+nav { flex-grow: 1; }
+.header-left figure { max-width: 25%; }
+
+.nav-menu{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background: #000;
+}
+
+.nav-menu li:nth-of-type(2) { position: relative; }
+  
+.club-sub-menu {
+  max-width: 55%;
+  position: absolute;
+  top: 0;
+  left: 40%;
+}
+
+.nav-menu li a {
+  color: #fff;
+  font-size: 13px;
+}
+
+header .wrapper { 
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav-menu > li { 
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+.nav-menu li a { padding: 5px; }
+
+.competition-section { 
+  padding: 25px 0;
+  background: #EEEEEE;
+}
+
+.competition-info h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  text-transform: capitalize;
+}
+/*index page end*/
+
+/*club page start*/
+.hide { display: none; }
+
+.club-box,
+.match-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #0A1184;
+  text-transform: capitalize;
+}
+
+.club-body main .wrapper,
+.match-main .wrapper { 
+  width: 70%;
+  padding: 40px 0;
+}
+
+.club-box select,
+.match-box select { 
+  padding: 5px;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 5px;
+  flex-basis: 25%;
+  float: left;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+th { 
+  font-weight: bold;
+  text-align: initial;
+}
+
+tr { 
+  width: 100%;
+  display: flex;
+}
+
+.load-btn a {
+  padding: 5px;
+  border-radius: 3px;
+  background: #090F7C;
+  color: #fff;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.result table { width: 100%; }
+
+tbody {
+  display: flex;
+  flex-direction: column;
+}
+/*club page end*/
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+/*index page start*/
+.banner-section {
+  min-height: 300px;
+  margin-bottom: 25px;
+  position: relative;
+  background: url(/assets/images/banner/banner2.jpg) no-repeat center center/cover;
+}
+
+.banner-section .wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: #fff;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.home-main h1 { font-size: 22px; }
+.home-main .banner-section p { font-size: 15px; }
+
+.history .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}
+
+.history-info h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.info p {
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 23px;
+  text-align: justify;
+}
+
+.info li span { 
+  text-indent: -9999px;
+  display: inline-block;
+  position: relative;
+}
+
+.info span::before {
+  content: '\f00c';
+  position: absolute;
+  left: 0;
+  color: #0B1186;
+  font-family: "FontAwesome";
+  font-size: 15px;
+  text-indent: 0;
+}
+
+.info li { 
+  display: flex;
+  flex-direction: row;
+}
+
+.info li span {
+  align-self: baseline;
+  flex-basis: 22%;
+}
+
+.read-more {
+  display: flex;
+  justify-content: center;
+}
+
+.read-more a {
+  padding: 7px 4%;
+  border-radius: 5px;
+  background-color: #0B1186;
+  color: #fff;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.history { margin-bottom: 25px; }
+
+.header-right form button {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  background: #0A1184;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.competition-info li span { flex-basis: 10%; }
+.competition-info li p { flex-basis: 90%; }
+.competition-info .info { margin-bottom: 10px; }
+/*index page end*/
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+.footer-left { display: flex; }
+
+.footer-nav-menu{
+  display: flex;
+  flex-basis: 80%;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: flex-end;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+  
+.footer-left { 
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-left figure { flex-basis: 10%; }
+.footer-nav-menu li a { color: #fff; }
+
+.social-links li a {
+  min-width: 25px;
+  min-height: 25px;
+  position: relative;
+  border-radius: 50%;
+  background: #060F7C;
+}
+
+.footer-icon::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-family: "FontAwesome";
+  font-size: 13px;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+}
+
+.facebook::before { content: '\f09a'; }
+.twitter::before { content: '\f099'; }
+.google::before { content: '\f09a'; }
+.pinterest::before { content: '\f231'; }
+
+.footer-icon {
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.social-links { 
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-right p { 
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+}
+
+footer { 
+  padding: 10px 0;
+  background: #000;
+}
+
+.footer-left figure img { border-radius: 50%; }
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 480px starts here*/
+@media only screen and (min-width: 480px) {
+/*login page*/
+.login-main .wrapper { max-width: 70%; }
+
+/*index page*/
+.home-main h1 { font-size: 25px; }
+
+.info p {
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.read-more a {
+  padding: 9px 4%;
+  font-size: 13px;
+}
+
+.history { margin-bottom: 40px; }
+
+.history-info h2,
+.competition-info h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  letter-spacing: 1.2px;
+}  
+
+footer .wrapper { width: 70%; }
+
+/*club page*/
+.club-body main .wrapper,
+.match-main .wrapper {  width: 60%; }
+}
+
+/*media query for 540px starts here*/
+@media only screen and (min-width: 540px) {
+/*login page*/
+.login-main .wrapper { max-width: 55%; }
+
+.login-main form input { 
+  min-width: 70%;
+  margin-bottom: 30px;
+}
+
+.history .wrapper,
+.competition-section .wrapper { 
+  width: 70%;
+}
+
+.info li span { flex-basis: 15%; }
+.competition-info li span { flex-basis: 10%; }
+.info span::before { font-size: 17px; }
+.history-info li:nth-of-type(2) p { margin-bottom: 20px; }
+.info p { line-height: 28px; }
+.history-info { padding: 10px 3%; }
+.history .wrapper { gap: 5px; }
+.footer-left figure { flex-basis: 7%; }
+.header-left figure { max-width: 15%; }
+
+.header-right form button {
+  padding: 8px;
+  font-size: 13px;
+}
+
+/*club page*/
+.load-btn a { padding: 8px; }
+} 
+
+/*media query for 768px starts here*/
+@media only screen and (min-width: 768px) {
+/*login page*/
+.login-main .wrapper { max-width: 40%; }
+.login-main input::placeholder { font-size: 15px; }
+
+.login-main form input {
+  min-width: 70%;
+  margin-bottom: 40px;
+}
+
+/*index page*/
+.header-left figure { max-width: 15%; }
+.banner-section { min-height: 400px; }
+.banner-section .wrapper { bottom: 50px; }
+.history .wrapper { flex-direction: row; }
+.history .wrapper figure { flex-basis: 40%; }
+.history-info { flex-basis: 60%; }
+.nav-menu li:hover { background-color: #fff; }
+.nav-menu li:hover a { color: #2D1384; }
+
+.history figure img { 
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.history .wrapper,
+.competition-section .wrapper {
+  width: 86%;
+}
+
+.competition-section .wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.competition-info {
+  flex-basis: 60%;
+  padding: 5px 3%;
+}
+
+.competition-section figure img {
+  min-height: 100%;
+  object-fit: cover;
+}
+
+footer .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  
+.footer-left { 
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+  
+.footer-left figure { max-height: 30px; }
+.footer-left figure img { max-height: 30px; }
+
+.footer-right {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+}
+
+.footer-right p { margin-bottom: 0; }
+
+.hamburger-toggle:hover,
+.header-right form button:hover,
+.read-more a:hover { 
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-nav-menu li a:hover { color: #05F1FE; }
+
+.social-links li a:hover { 
+  background-color: #05F1FE;
+  color: #060F7C;
+}
+
+/*club page*/
+.club-body main .wrapper,
+.match-main .wrapper {  
+  width: 40%;
+}
+} 
+
+/*media query for 995px starts here*/
+@media only screen and (min-width: 995px) {
+/*login page*/
+.login-main span:nth-of-type(1) {
+  min-width: 70px;
+  min-height: 70px;
+}
+
+h1 { font-size: 22px; }
+.login-main form input { border-bottom: 2px solid #3520B9; }
+
+.btn-box button {
+  padding: 10px 7%;
+  font-size: 17px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: initial;
+  background-color: #fff;
+}
+
+.hamburger-toggle { display: none; }
+.nav-menu li a { color: #000; }
+.nav-menu li:nth-of-type(2) { position: relative; }
+
+.club-sub-menu { 
+  max-width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 10;
+}
+
+.club-sub-menu li { width: 200%; }
+.club-sub-menu li a { padding: 5px 0; }
+
+.header-left { 
+  flex-basis: 80%;
+  gap: 20px;
+}
+
+.nav-menu { gap: 30px; }
+.header-right { flex-basis: 20%; }
+.nav-menu { justify-content: flex-start; }
+.header-left figure { max-width: 8%; }
+.nav-menu li a { font-size: 14px; }
+nav { display: block; }
+.club-sub-menu { display: none; }
+footer { padding: 15px 0; }
+.footer-left { gap: 15px; }
+.social-links { margin-bottom: 15px; }
+} 
+
+/*media query for 1024px starts here*/
+@media only screen and (min-width: 1024px) {
+/*login page*/
+.login-main .wrapper { max-width: 30%; }
+
+/*index page*/
+.history .wrapper,
+.competition-section .wrapper {
+  width: 75%;
+}
+
+.history .wrapper figure { flex-basis: 50%; }
+
+.history-info { 
+  padding: 10px 5%;
+  flex-basis: 50%;
+}
+
+.banner-section { margin-bottom: 40px; }
+.info li span { flex-basis: 20%; }
+.info span::before { top: 5px; }
+.competition-info li span { flex-basis: 8%; }
+.read-more a { font-size: 15px; }
+.history-info li:nth-of-type(2) p { margin-bottom: 30px; }
+.competition-section { padding: 40px 0; }
+
+.competition-info,
+.competition-section figure {
+  flex-basis: 50%;
+}
+
+.banner-section { min-height: 500px; }
+.header-left figure { max-width: 8%; }
+}

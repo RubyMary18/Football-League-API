@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8">
+    <title>Club</title>
+    <meta name="description" lang="en" content="Football Premier League Club-List Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+  </head>
+  <body class="club-body">
+    <!--container start-->
+    <div class="container">
+      <!--header section start-->
+      <header>
+        <div class="wrapper">
+          <div class="header-left">
+            <figure><a href="index.html" title="Logo"><img src="./assets/images/Logo/logo8.png" alt="Logo"></a></figure>
+            <nav>
+              <ul class="nav-menu hide">
+                <li><a href="index.html" title="Home" class="nav-link">home</a></li>
+                <li><a href="club.html" title="Clubs list" class="nav-link chevron-down icon">clubs list</a></li>
+                <li><a href="match.html" title="Match details" class="nav-link">match details</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-right">
+            <div class="hamburger-toggle">
+              <span class="hamburger"></span>
+            </div>
+            <form method="post" action="#FIXME">
+              <div class="log-out">
+                <button type="submit" class="upper">log out</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </header>
+      <!--header section ends-->
+      <!--main section start-->
+      <main>
+        <div class="wrapper">
+          <div class="club-box wrap">
+            <label for="clubs-list">clubs list</label>
+            <select name="country" id="clubs-list">
+              <option value="">-choose-</option>
+            </select>
+            <span class="required-content">country</span>
+          </div>
+          <div class="result hide">
+            <table>
+              <thead>
+                <tr>
+                  <th>team1 name</th>
+                  <th>team2 name</th>
+                  <th>team1 score</th>
+                  <th>team2 score</th>
+                </tr>
+              </thead>
+              <tbody class="tabel-data">
+                <tr>
+                  <td>name1</td>
+                  <td>name2</td>
+                  <td>score1</td>
+                  <td>score2</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="load-btn">
+              <a href="#FIXME" title="Load more">load more</a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!--main section end-->
+      <!--footer section start-->
+      <footer>   
+        <div class="wrapper">
+         <div class="footer-left">
+           <figure>
+             <a href="index.html" title="Premier logo"><img src="./assets/images/Logo/logo8.png" alt="Logo"></a>
+           </figure>
+           <ul class="footer-nav-menu">
+             <li><a href="index.html" title="Home" class="nav-link">home</a></li>
+             <li><a href="club.html" title="Clubs list" class="nav-link">clubs list</a></li>
+             <li><a href="match.html" title="Match details" class="nav-link">match details</a></li>
+           </ul>
+         </div>
+         <div class="footer-right">
+           <ul class="social-links">
+             <li><a href="https://www.facebook.com/login/" title="Facebook" target="_blank" rel="noopener"
+                 class="footer-icon facebook">facebook</a></li>
+             <li><a href="https://twitter.com/i/flow/login" title="Twitter" target="_blank" rel="noopener"
+                 class="footer-icon twitter">twitter</a></li>
+             <li><a href="https://myaccount.google.com/" title="Google plus" target="_blank" rel="noopener"
+                 class="footer-icon google">google</a></li>
+             <li><a href="https://in.pinterest.com/login/" title="pinterest" target="_blank" rel="noopener"
+                 class="footer-icon pinterest">pinterest</a></li>
+           </ul>
+           <p>&#169; 2022 Company name. Designed by Themezy. All rights reserved</p>
+         </div>
+        </div>
+      </footer>
+      <!--footer section end-->
+    </div>
+    <!--container end-->
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
