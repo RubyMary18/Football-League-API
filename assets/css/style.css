@@ -554,7 +554,7 @@ tbody {
   min-height: 300px;
   margin-bottom: 25px;
   position: relative;
-  background: url(/assets/images/banner/banner2.jpg) no-repeat center
+  background: url(../../assets/images/banner/banner2.jpg) no-repeat center
     center/cover;
 }
 
